@@ -1,0 +1,21 @@
+{
+  "name": "ecommerce-backend",
+  "version": "1.0.0",
+  "description": "MERN backend for an ecommerce store with cart, checkout and discount system",
+  "main": "server.js",
+  "scripts": {
+    "start": "NODE_ENV=production node server.js",
+    "dev": "NODE_ENV=development nodemon server.js"
+  },
+  "keywords": [],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "mongoose": "^7.3.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}

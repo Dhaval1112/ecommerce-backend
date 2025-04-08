@@ -4,11 +4,13 @@ const app = express();
 
 // Routes
 const cartRoutes = require('./routes/cartRoutes');
+const adminRoutes = require('./routes/adminRoutes');
 
 app.use(express.json());
 
 // Mount routes
 app.use('/api/cart', cartRoutes);
+app.use('/api/admin', adminRoutes);
 
 // Not found handler
 app.use('*', (req, res) => {

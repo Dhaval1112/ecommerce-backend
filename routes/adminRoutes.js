@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { generateCode, getStats } = require('../controllers/adminController');
+const { generateCode, getStats, getStoreInformation } = require('../controllers/adminController');
 
 // Middleware to check if the user is an admin
 router.use((req, res, next) => {
@@ -13,5 +13,6 @@ router.use((req, res, next) => {
 
 router.get('/generate-discount', generateCode);
 router.get('/stats', getStats);
+router.get('/store', getStoreInformation);
 
 module.exports = router;

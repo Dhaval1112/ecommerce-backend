@@ -5,12 +5,14 @@ const app = express();
 // Routes
 const cartRoutes = require('./routes/cartRoutes');
 const adminRoutes = require('./routes/adminRoutes');
+const checkoutRoutes = require('./routes/checkoutRoutes');
 
 app.use(express.json());
 
 // Mount routes
 app.use('/api/cart', cartRoutes);
 app.use('/api/admin', adminRoutes);
+app.use('/api/checkout', checkoutRoutes);
 
 // Not found handler
 app.use('*', (req, res) => {

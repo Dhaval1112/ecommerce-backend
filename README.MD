@@ -86,7 +86,7 @@ Checkout with discount
 ![Checkout with discount](assets/screenshots/checkout-with-discount-code.png)
 
 Statistics (stats) API for the admins
-![Stats](assets/screenshots/stats_api.png)
+![Stats](assets/screenshots/stats-api.png)
 
 Store API for getting all the store information (cart, orders, nth order value etc)
 ![Store API](assets/screenshots/store-api.png)

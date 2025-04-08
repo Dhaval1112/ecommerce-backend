@@ -2,18 +2,18 @@
   "name": "ecommerce-backend",
   "version": "1.0.0",
   "description": "MERN backend for an ecommerce store with cart, checkout and discount system",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=production node server.js",
-    "dev": "cross-env NODE_ENV=development nodemon server.js"
+    "start": "cross-env NODE_ENV=production node app.js",
+    "dev": "cross-env NODE_ENV=development nodemon app.js"
   },
   "keywords": [],
   "author": "Your Name",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.4.1",
-    "express": "^4.18.2",
-    "mongoose": "^7.3.4"
+    "express": "^4.18.2"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",

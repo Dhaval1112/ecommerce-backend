@@ -19,7 +19,6 @@ if (fs.existsSync(envPath)) {
 
 module.exports = {
     port: process.env.PORT || 5000,
-    mongoUri: process.env.MONGO_URI,
     env: nodeEnv,
     discountEveryNthOrder: parseInt(process.env.DISCOUNT_EVERY_NTH_ORDER) || 3,
     discountPercent: parseFloat(process.env.DISCOUNT_PERCENT) || 0.1,

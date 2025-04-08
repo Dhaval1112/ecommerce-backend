@@ -4,8 +4,6 @@ const generateCode = require('../utils/generateCode');
 function generateDiscountCode() {
     const currentOrderCount = store.orders.length;
 
-    console.log(currentOrderCount, store.nthOrder, "currentOrderCount, store.nthOrder :: ", (currentOrderCount + 1) % store.nthOrder, ((currentOrderCount + 1) % store.nthOrder) == 0);
-
     if (((currentOrderCount + 1) % store.nthOrder) == 0) {
         const code = generateCode();
         store.discountCodes.push({ code, used: false });

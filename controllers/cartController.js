@@ -11,7 +11,5 @@ exports.addToCart = (req, res) => {
     cart.push({ item, price, quantity });
     store.carts.set(userId, cart);
 
-    // Todo need to check that how to print it in json format
-    console.log("store.carts :: ", store.carts, JSON.stringify(store.carts));
     res.status(200).json({ message: 'Item added to cart', cart });
 };

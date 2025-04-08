@@ -1,5 +1,6 @@
 const store = require('../storage/memoryStore');
 const { validateCode, markCodeUsed } = require('../services/discountService');
+const config = require('../config/config');
 
 exports.checkout = (req, res) => {
     const { userId, discountCode } = req.body;
@@ -19,7 +20,7 @@ exports.checkout = (req, res) => {
         const valid = validateCode(discountCode);
         if (!valid) return res.status(400).json({ error: 'Invalid or used discount code' });
 
-        discount = totalAmount * 0.1;
+        discount = totalAmount * config.discountPercent;
         appliedCode = discountCode;
         markCodeUsed(discountCode);
     }

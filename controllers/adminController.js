@@ -19,15 +19,15 @@ exports.getStats = (req, res) => {
 
     // Providing the statistics in the response
     res.status(200).json({
-        itemCount,
+        orderCount: itemCount,
         totalPurchase: totalPurchase.toFixed(2),
         totalDiscount: totalDiscount.toFixed(2),
-        totalDiscount,
         discountCodes: codes,
     });
 };
 
 // This function is used to get the statistics of the store
 exports.getStoreInformation = (req, res) => {
-    res.status(200).json(store);
+    // Object.fromEntries(store.carts);
+    res.status(200).json({ ...store, carts: Object.fromEntries(store.carts) });
 };

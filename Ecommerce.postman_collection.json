@@ -1,0 +1,167 @@
+{
+	"info": {
+		"_postman_id": "13ccc63b-22a3-4693-a8cd-a86771000a62",
+		"name": "Ecommerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39517393"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Add-to-cart",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": \"user123\",\n    \"item\": \"Wireless Mouse\",\n    \"price\": 50.00,\n    \"quantity\": 2\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/cart/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"cart",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": \"user123\"\n    // \"discountCode\": \"DISCOUNT-2VXAXV\"\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/checkout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"checkout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "states",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "flagadmin",
+								"value": "true"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/admin/stats",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"admin",
+								"stats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "generate-discount",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "flagadmin",
+								"value": "true"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/admin/generate-discount",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"admin",
+								"generate-discount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store - (optional)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "flagadmin",
+								"value": "true"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/admin/store",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"admin",
+								"store"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
